@@ -6,12 +6,15 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["script.js"]
+      "js": ["script.js", "popup.js"]
     }
   ],
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "GitHub contribution theme"
-  }
+  },
+  "permissions": [
+    "storage"
+  ]
 
 }
