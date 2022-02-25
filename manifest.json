@@ -1,17 +1,18 @@
 {
   "manifest_version": 2,
-  "name": "GitHub contribution theme",
-  "description": "Change color of contribution on your GitHub Profile",
+  "name": "GitHub Calendar Color Changer",
+  "description": "Change the color of your calendar contribution in your GitHub profile.",
   "version": "1.0.0",
+  "author": "Justin Pascual",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["script.js", "popup.js"]
+      "js": ["script.js"]
     }
   ],
   "browser_action": {
     "default_popup": "index.html",
-    "default_title": "GitHub contribution theme"
+    "default_title": "GitHub Calendar Color Changer"
   },
   "permissions": [
     "storage"

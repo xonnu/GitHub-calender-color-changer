@@ -4,6 +4,10 @@ const setProperty = (property, color) => {
   return root.style.setProperty(property, color);
 }
 
+const setStyle = (element, style_property) => {
+  return (element != null) ?  style_property : false
+}
+
 const changeColor = (chosen_color) => {
   var color_L1 = `${chosen_color}50`
   var color_L2 = `${chosen_color}88`
@@ -22,7 +26,12 @@ const changeColor = (chosen_color) => {
     }
   }
 
-  setProperty("--color-calendar-graph-day-bg", `${chosen_color}10`)
+  setProperty("--color-calendar-graph-day-bg", `${chosen_color}10`) // no contribution day in calendar
+  setProperty("--color-primer-border-active", chosen_color) // tab active state in profile
+  
+  // chagne pro color
+  setProperty("--color-done-fg", chosen_color)
+  setProperty("--color-done-emphasis", chosen_color)
 
   let path_stroke = document.querySelector('.js-highlight-blob');
 
@@ -35,7 +44,7 @@ const changeColor = (chosen_color) => {
 var chosen_color = '#3489eb';
 
 chrome.storage.sync.get(["github_calendar_color"], (result) => {
-  changeColor(result.github_calendar_color || '#3489eb')
+  changeColor(result.github_calendar_color || chosen_color)
 })
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
