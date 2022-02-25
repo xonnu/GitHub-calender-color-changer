@@ -5,8 +5,8 @@
   "version": "1.0.0",
   "content_scripts": [
     {
-      "matches": ["https://github.com"],
-      "js": ["Content.js"]
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
     }
   ]
 
