@@ -22,6 +22,8 @@ const changeColor = (chosen_color) => {
     }
   }
 
+  setProperty("--color-calendar-graph-day-bg", `${chosen_color}10`)
+
   let path_stroke = document.querySelector('.js-highlight-blob');
 
   if (path_stroke != null) {
@@ -30,10 +32,10 @@ const changeColor = (chosen_color) => {
   }
 }
 
-var chosen_color = '#038cfc';
+var chosen_color = '#3489eb';
 
 chrome.storage.sync.get(["github_calendar_color"], (result) => {
-  changeColor(result.github_calendar_color)
+  changeColor(result.github_calendar_color || '#3489eb')
 })
 
 chrome.storage.onChanged.addListener((changes, areaName) => {
