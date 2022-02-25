@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub contribution theme",
+  "description": "Change color of contribution on your GitHub Profile",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com"],
+      "js": ["Content.js"]
+    }
+  ]
+
+}
