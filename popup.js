@@ -7,16 +7,12 @@ window.addEventListener('load', () => {
     set_input_picker.addEventListener('change', () => {
       chrome.storage.sync.set({
         "github_calendar_color": set_input_picker.value
-      }, () => {
-        // success message
       })
     })
 
     set_button.addEventListener('click', () => {
       chrome.storage.sync.set({
         "github_calendar_color": set_input.value
-      }, () => {
-        // success message
       })
     })
   }
