@@ -5,11 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHub Contributiom Theme</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <label for="set-color-input">Set Color</label>
-  <input type="text" id="set-color-input"><br>
-  <button type="button" id="set-color-btn">Set Color</button>
+  <div class="container">
+      <h3>GitHub Calendar Color Changer</h3>
+      <label for="set-color-input">Set Color</label>
+      <input type="color" id="set-color-input-picker">
+      <input type="text" id="set-color-input" placeholder="Hex Color">
+      <button type="button" id="set-color-btn">Set Color</button>
+  </div>
 </body>
 <script src="popup.js"></script>
 </html>
