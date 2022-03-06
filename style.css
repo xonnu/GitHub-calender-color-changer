@@ -17,11 +17,12 @@ img {
 }
 
 .container {
-  padding: 16px;
+  width: 300px;
+  padding: 32px;
   background-color: white;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .container a {
