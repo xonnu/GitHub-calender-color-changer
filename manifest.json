@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "GitHub Calendar Color Changer",
   "description": "Change the color of your calendar contribution in your GitHub profile.",
   "version": "1.0.0",
@@ -10,7 +10,7 @@
       "js": ["script.js"]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "index.html",
     "default_title": "GitHub Calendar Color Changer"
   },
