@@ -51,3 +51,5 @@ chrome.storage.sync.get(["github_calendar_color"], (result) => {
 chrome.storage.onChanged.addListener((changes) => {
   changeCalendarColor(changes.github_calendar_color.newValue)
 });
+
+// this is a comment from GitHub dev website.
